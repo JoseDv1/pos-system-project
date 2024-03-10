@@ -4,3 +4,7 @@
 [submodule "server"]
 	path = server
 	url = ./server
+[submodule "git@github.com:JoseDv1/pos-system-server.git"]
+	url = ./server
+[submodule "git@github.com:JoseDv1/pos-system-client.git"]
+	url = ./client
