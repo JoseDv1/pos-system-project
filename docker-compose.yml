@@ -1,7 +1,9 @@
 version: '3'
 services:
   client:
-    image: josedv1/pos-system:client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
     ports:
       - "4321:4321"
     depends_on:
@@ -9,7 +11,9 @@ services:
     environment:
       - PUBLIC_API_URL=http://server:3000/api
   server:
-    image: josedv1/pos-system:server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
     environment:
       - DATABASE_URL=postgres://postgres:possystem1001446301!@db:5432/pos_system_db
     ports:
@@ -24,3 +28,5 @@ services:
       - POSTGRES_DB=pos_system_db
     ports:
       - "5432:5432"
+    volumes:
+      - ./pos_system_db_data:/var/lib/postgresql/data
