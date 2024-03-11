@@ -8,3 +8,7 @@
 	url = ./server
 [submodule "git@github.com:JoseDv1/pos-system-client.git"]
 	url = ./client
+[submodule "./client"]
+	url = https://github.com/JoseDv1/pos-system-client.git
+[submodule "./server"]
+	url = https://github.com/JoseDv1/pos-system-server.git
